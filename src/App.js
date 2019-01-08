@@ -22,6 +22,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className = "column-left">
+          <header>
+            <h1>Bloc Chat</h1>
+          </header>
           <RoomList firebase = {firebase} />
         </div>
       </div>
