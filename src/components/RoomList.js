@@ -20,13 +20,13 @@ class RoomList extends Component {
   render() {
     return (
       <div className = "room-list">
-        <div className = "Rooms">
-          <table>
-            <tbody>
-              {this.state.rooms.map()}
-            </tbody>
-          </table>
-        </div>
+        <table>
+          <tbody>
+            {this.state.rooms.map( (room) =>
+              <tr key = {room.key}>{room.name}</tr>)
+            }
+          </tbody>
+        </table>
       </div>
     )
   }
