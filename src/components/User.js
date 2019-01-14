@@ -34,6 +34,9 @@ class User extends Component {
   render() {
     return(
       <div className = "sign-buttons">
+        <div className = "username">
+          { this.props.userName ? this.props.userName.displayName : '' }
+        </div>
         <button className = "sign-in-button" onClick = { () => this.handleSignIn() }>
           Sign In
         </button>
