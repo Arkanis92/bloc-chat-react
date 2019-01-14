@@ -29,13 +29,22 @@ class RoomList extends Component {
     this.setState({ newRoom: e.target.value })
   }
 
+  handleClick(room) {
+    this.props.setActiveRoom(room);
+  }
+
   render() {
     return (
       <div className = "room-list">
         <table>
           <tbody>
             {this.state.rooms.map( (room) =>
-              <tr key = {room.key}>{room.name}</tr>
+              <tr
+                key = {room.key}
+                onClick = { () => this.handleClick(room) }
+                >
+                  {room.name}
+                </tr>
             )}
           </tbody>
         </table>
